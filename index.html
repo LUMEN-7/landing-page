@@ -1,53 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <section class="hero">
-        <div class="hero_content">
-            <!-- Header Desktop (link link logo link link) -->
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- /* START SECTION HERO */===================================================-->
+      <section class="hero">
+         <div class="hero_content">
             <header>
-                <a href="#know-more-about-lumers">about us</a>
-                <a href="#projects">projects</a>
-                <img class="logo" src="assets/logo-lumen.png" alt="Lumen Logo">
-                <a href="#highlights">highlights</a>
-                <a href="#contact">contact us</a>
+               <a href="#know-more-about-lumers">about us</a>
+               <a href="#projects">projects</a>
+               <img class="logo" src="assets/logo-lumen.png" alt="Lumen Logo">
+               <a href="#highlights">highlights</a>
+               <a href="#fale-conosco">contact us</a>
             </header>
-            
-            <!-- Menu Mobile (hamburger) - Só aparece em mobile -->
             <div class="nav-mobile">
-                <img class="logo" src="assets/logo-lumen.png" alt="Lumen Logo">
-                <button class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+               <img class="logo" src="assets/logo-lumen.png" alt="Lumen Logo">
+               <button class="hamburger" id="hamburger">
+               <span></span>
+               <span></span>
+               <span></span>
+               </button>
             </div>
-            
-            <!-- Conteúdo principal -->
             <div>
-                <h1>Inovação que <br><span>ilumina</span> soluções</h1>
+               <h1>Inovação que <br><span>ilumina</span> soluções</h1>
             </div>
-        </div>
-    </section>
-
-    <!-- Menu lateral para mobile - CORREÇÃO: inicialmente escondido -->
-    <div class="mobile-menu" id="mobile-menu">
-        <button class="close-menu" id="close-menu">×</button>
-        <nav>
+         </div>
+      </section>
+      <div class="mobile-menu" id="mobile-menu">
+         <button class="close-menu" id="close-menu">×</button>
+         <nav>
             <a href="#know-more-about-lumers">about us</a>
             <a href="#projects">projects</a>
             <a href="#highlights">highlights</a>
-            <a href="#contact">contact us</a>
-        </nav>
-    </div>
-
-    <div class="overlay" id="overlay"></div>
-    
-<script src="script.js"></script>
-</body>
+            <a href="#footer">contact us</a>
+         </nav>
+      </div>
+      <div class="overlay" id="overlay"></div>
+      <!-- /* END SECTION HERO */===================================================-->
+      <!-- /* START SECTION ABOUT US */===================================================-->
+      <section id="know-more-about-lumers" class="about_us">
+         <div class="sobre">
+         <!-- Navegação por abas para mobile -->
+         <div class="tabs-navigation">
+            <button class="tab-button active" data-tab="about">Sobre</button>
+            <button class="tab-button" data-tab="team">Equipe</button>
+         </div>
+         <!-- Conteúdo Sobre -->
+         <div id="about" class="tab-content active">
+            <div class="imagem-container">
+               <img src="assets/about.jpg" alt="Imagem sobre nós" class="imagem-sobre">
+            </div>
+            <h1>Sobre a Lumen</h1>
+            <p>Na Lumen, acreditamos que a inovação é a luz que guia o futuro.
+               Somos uma equipe apaixonada por criar soluções que conectam pessoas, ideias e tecnologia de maneira inteligente e humana.
+               Nascemos do desejo de transformar desafios em oportunidades, sempre com criatividade, ética e excelência em tudo o que fazemos.
+               Cada projeto é uma nova chance de iluminar caminhos, impulsionar mudanças e construir um amanhã mais brilhante.
+               Na Lumen, não apenas desenvolvemos soluções — acendemos possibilidades.
+            </p>
+            <div class="swipe-indicator">
+               <div class="dot active"></div>
+               <div class="dot"></div>
+            </div>
+         </div>
+         <!-- Conteúdo Equipe -->
+         <div id="team" class="tab-content">
+         <div class="time">
+         <div class="container">
+            <div class="card" onclick="toggleContent(this)">
+               <div class="imgBx">
+                  <img class="image" src="assets/muri.jpeg" alt="Murilo">
+               </div>
+               <div class="contentBx">
+                  <h2>Murilo</h2>
+                  <div class="size">
+                     <span>
+                     <a href="https://www.linkedin.com/in/murilocordeirof/" target="_blank">
+                     <img src="assets/din.png" alt="LinkedIn" width="20">
+                     </a>
+                     </span>
+                     <span>
+                     <a href="https://www.instagram.com/muh_ngp/" target="_blank">
+                     <img src="assets/insta.png" alt="Instagram" width="20">
+                     </a>
+                     </span>
+                  </div>
+                  <div class="color">
+                     <h3>PO</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="card" onclick="toggleContent(this)">
+               <div class="imgBx">
+                  <img class="image" src="assets/ianny.jpeg" alt="Mateus">
+               </div>
+               <div class="contentBx">
+                  <h2>Ianny</h2>
+                  <div class="size">
+                     <span>
+                     <a href="https://www.linkedin.com/in/iannyraquel/" target="_blank">
+                     <img src="assets/din.png" alt="LinkedIn" width="20">
+                     </a>
+                     </span>
+                     <span>
+                     <a href="https://www.instagram.com/iannyrfs/" target="_blank">
+                     <img src="assets/insta.png" alt="Instagram" width="20">
+                     </a>
+                     </span>
+                  </div>
+                  <div class="color">
+                     <h3>Designer</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="card" onclick="toggleContent(this)">
+               <div class="imgBx">
+                  <img class="image" src="assets/Lana.jpeg" alt="Lana">
+               </div>
+               <div class="contentBx">
+                  <h2>Lana</h2>
+                  <div class="size">
+                     <span>
+                     <a href="https://www.linkedin.com/in/ana-laura-torres-loureiro-b85ba1298" target="_blank">
+                     <img src="assets/din.png" alt="LinkedIn" width="20">
+                     </a>
+                     </span>
+                     <span>
+                     <a href="https://www.instagram.com/_lana.007_/" target="_blank">
+                     <img src="assets/insta.png" alt="Instagram" width="20">
+                     </a>
+                     </span>
+                  </div>
+                  <div class="color">
+                     <h3>Líder</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="card" onclick="toggleContent(this)">
+               <div class="imgBx">
+                  <img class="image" src="assets/GG.jpeg" alt="Minha Pomba>">
+               </div>
+               <div class="contentBx">
+                  <h2>Gêronimo</h2>
+                  <div class="size">
+                     <span>
+                     <a href="https://www.linkedin.com/in/geronimo-augusto-99643a2b8/" target="_blank">
+                     <img src="assets/din.png" alt="LinkedIn" width="20">
+                     </a>
+                     </span>
+                  </div>
+                  <div class="color">
+                     <h3>Dev Back-end</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="card" onclick="toggleContent(this)">
+               <div class="imgBx">
+                  <img class="image" src="assets/vitter.jpeg" alt="Vitor">
+               </div>
+               <div class="contentBx">
+                  <h2>Vitor</h2>
+                  <div class="size">
+                     <span>
+                     <a href="https://www.linkedin.com/in/vitor-augusto-4bb6a72b7/" target="_blank">
+                     <img src="assets/din.png" alt="LinkedIn" width="20">
+                     </a>
+                     </span>
+                     <span>
+                     <a href="https://www.instagram.com/6vitor.9/" target="_blank">
+                     <img src="assets/insta.png" alt="Instagram" width="20">
+                     </a>
+                     </span>
+                  </div>
+                  <div class="color">
+                     <h3>Data Dev</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- END ABOUT=========================================================== -->
+      <!-- START PROJECTS======================================================= -->
+      <section class="projects" id="projects">
+         <input type="checkbox" id="toggle-slide">
+         <div class="overlay"></div>
+         <div class="glass-container">
+            <div class="slider-wrapper">
+               <div class="slide slide1">
+                  <div class="container-about">
+                     <div class="left-content">
+                        <h1>RACEPACE</h1>
+                     </div>
+                     <div class="center-content">
+                        <img src="assets/pitch.png" alt="Imagem do projeto" class="round-image">
+                     </div>
+                     <div class="right-content">
+                        <p>O projeto da <strong>Mahindra</strong> visa popularizar a Fórmula E, tornando o esporte mais acessível e atraente para novos fãs. Através de uma plataforma digital inovadora, oferecemos conteúdo exclusivo, informações sobre corridas e interação direta com o público, ampliando o alcance e o engajamento da Fórmula E no cenário global.</p>
+                        <a href="https://fast-pace-nine.vercel.app/" target="_blank" class="btn-about">CONHEÇA MAIS</a>
+                        <p class="partner">Parceiro: <strong>GRANDE PRÊMIO</strong></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="slide slide2">
+                  <div class="container-about">
+                     <div class="left-content">
+                        <h1>LABFLOW</h1>
+                     </div>
+                     <div class="center-content">
+                        <img src="assets/dasa.png" alt="Imagem do projeto" class="round-image">
+                     </div>
+                     <div class="right-content">
+                        <p>O projeto da <strong>DASA</strong> tem como objetivo transformar a gestão de laboratórios em um processo mais ágil, organizado e acessível. Através de uma plataforma digital intuitiva, oferecemos recursos para o controle de insumos, acompanhamento de operações e geração de relatórios inteligentes. Com isso, garantimos maior eficiência, transparência e colaboração entre pesquisadores e gestores, potencializando a inovação e o impacto das atividades científicas.</p>
+                        <a href="https://fast-pace-nine.vercel.app/" target="_blank" class="btn-about">CONHEÇA MAIS</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <label for="toggle-slide" class="button"><img src="assets/flecha.png" width="40px" alt=""></label>
+         </div>
+      </section>
+      <!-- END PROJECTS=========================================================== -->
+      <!-- START GALERIA======================================================= -->
+      <section class="call_action" id="highlights">
+         <div class="gallery">
+            <div class="cardGaleria">
+               <div class="cardGaleria-img-container">
+                  <img src="assets/terceiro.jpg" alt="Terceiro lugar no Next">
+               </div>
+               <div class="cardGaleria-content">
+                  <h3>3º Lugar no Next</h3>
+                  <p>Conquistamos a terceira colocação no programa Next, reconhecimento que reforça a inovação e o impacto da nossa solução.</p>
+               </div>
+            </div>
+            <div class="cardGaleria">
+               <div class="cardGaleria-img-container">
+                  <img src="assets/grandePremio.jpg" alt="Parceria com a Grande Prêmio">
+               </div>
+               <div class="cardGaleria-content">
+                  <h3>Parceria com a Grande Prêmio</h3>
+                  <p>Firmamos parceria estratégica com o <strong>Grande Prêmio</strong>, ampliando nossa visibilidade e conexão com o público durante o desenvolvimento do Racepace.</p>
+               </div>
+            </div>
+            <div class="cardGaleria">
+               <div class="cardGaleria-img-container">
+                  <img src="assets/pesquisa.png" alt="Pesquisa de campo">
+               </div>
+               <div class="cardGaleria-content">
+                  <h3>Pesquisa de Campo</h3>
+                  <p>Nosso trabalho é fundamentado em pesquisas de campo consistentes, ouvindo especialistas e comunidades para desenvolver soluções eficazes e reais.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer id="fale-conosco" class="footer">
+         <div class="glass-container-footer">
+            <div class="footer-content">
+               <!-- Coluna 1: Logo -->
+               <div class="footer-column logo-column">
+                  <img src="assets/fiap.png" alt="Logo FIAP">
+               </div>
+               <!-- Coluna 2: Contato e frase -->
+               <div class="footer-column contact-column">
+                  <h3>Fale Conosco</h3>
+                  <div class="social-icons">
+                     <a href="#">
+                     <img src="assets/instagram.png" alt="Instagram"> 
+                     Instagram
+                     </a>
+                     <a href="#">
+                     <img src="assets/github.png" alt="GitHub"> 
+                     GitHub
+                     </a>
+                     <a href="#">
+                     <img src="assets/email.png" alt="Email"> 
+                     Email
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               © 2024 Lumen. Todos os direitos reservados.
+            </div>
+         </div>
+      </footer>
+      <script src="script.js"></script>
+   </body>
 </html>
