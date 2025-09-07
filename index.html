@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero_content">
+            <!-- Header Desktop (link link logo link link) -->
+            <header>
+                <a href="#know-more-about-lumers">about us</a>
+                <a href="#projects">projects</a>
+                <img class="logo" src="assets/logo-lumen.png" alt="Lumen Logo">
+                <a href="#highlights">highlights</a>
+                <a href="#contact">contact us</a>
+            </header>
+            
+            <!-- Menu Mobile (hamburger) - Só aparece em mobile -->
+            <div class="nav-mobile">
+                <img class="logo" src="assets/logo-lumen.png" alt="Lumen Logo">
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <!-- Conteúdo principal -->
+            <div>
+                <h1>Inovação que <br><span>ilumina</span> soluções</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu lateral para mobile - CORREÇÃO: inicialmente escondido -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-menu" id="close-menu">×</button>
+        <nav>
+            <a href="#know-more-about-lumers">about us</a>
+            <a href="#projects">projects</a>
+            <a href="#highlights">highlights</a>
+            <a href="#contact">contact us</a>
+        </nav>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    
+<script src="script.js"></script>
+</body>
+</html>
