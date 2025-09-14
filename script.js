@@ -120,26 +120,5 @@ function handleSwipe() {
     }
 }
 function toggleContent(card) {
-    // Verifica se é mobile
-    if (window.innerWidth <= 767) {
-        // Fecha outros cards abertos
-        document.querySelectorAll('.card.mobile-active').forEach(activeCard => {
-            if (activeCard !== card) {
-                activeCard.classList.remove('mobile-active');
-            }
-        });
-
-        // Alterna o card clicado
-        card.classList.toggle('mobile-active');
-    } else {
-        // Comportamento original para desktop
-        card.classList.toggle('active');
-    }
+  card.classList.toggle('active'); // Alterna a classe 'active' no card
 }
-
-// Impede que os links dentro do card fechem o card no mobile
-document.querySelectorAll('.card a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.stopPropagation(); // bloqueia propagação do clique para o card
-    });
-});
