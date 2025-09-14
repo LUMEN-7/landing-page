@@ -121,39 +121,5 @@ function handleSwipe() {
 }
 
 function toggleContent(card) {
-    // Verifica se é mobile
-    if (window.innerWidth <= 767) {
-        // Fecha outros cards abertos
-        document.querySelectorAll('.card.mobile-active').forEach(activeCard => {
-            if (activeCard !== card) {
-                activeCard.classList.remove('mobile-active');
-            }
-        });
-
-        // Alterna o card clicado
-        card.classList.toggle('mobile-active');
-    } else {
-        // Comportamento original para desktop
         card.classList.toggle('active');
-    }
 }
-
-// Fechar o card ao clicar fora dele (apenas para mobile)
-document.addEventListener('click', function(event) {
-    if (window.innerWidth <= 767) {
-        const cards = document.querySelectorAll('.card');
-        let isClickInside = false;
-
-        cards.forEach(card => {
-            if (card.contains(event.target)) {
-                isClickInside = true;
-            }
-        });
-
-        if (!isClickInside) {
-            cards.forEach(card => {
-                card.classList.remove('mobile-active');
-            });
-        }
-    }
-});

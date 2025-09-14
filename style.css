@@ -704,33 +704,7 @@ body {
 }
 
 /* ===== RESPONSIVIDADE PARA MOBILE ===== */
-/* Swipe indicator */
-.swipe-indicator {
-	text-align: center;
-	color: var(--color-gray);
-	font-size: 0.8rem;
-	margin-top: 1.2rem;
-	/* Reduzido */
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 0.5rem;
-}
 
-.swipe-indicator .dot {
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: var(--color-gray);
-	opacity: 0.5;
-	transition: all var(--transition-medium);
-}
-
-.swipe-indicator .dot.active {
-	opacity: 1;
-	background: var(--color-accent);
-	transform: scale(1.2);
-}
 
 /* Melhorias de acessibilidade */
 @media (prefers-reduced-motion: reduce) {
@@ -789,10 +763,6 @@ body {
 		/* Reduzido para mobile */
 	}
 
-	.swipe-indicator {
-		margin-top: 1rem;
-		/* Reduzido para mobile */
-	}
 
 	/* REMOVER SCROLL DO TEXTO SOBRE */
 	.tab-content p {
