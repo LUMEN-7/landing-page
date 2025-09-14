@@ -119,44 +119,27 @@ function handleSwipe() {
         }
     }
 }
-
-// Função que abre/fecha cards
-function toggleCard(card, isMobile) {
-    if (isMobile) {
-        // Fecha outros cards
-        cards.forEach(c => {
-            if (c !== card) c.classList.remove('mobile-active');
+function toggleContent(card) {
+    // Verifica se é mobile
+    if (window.innerWidth <= 767) {
+        // Fecha outros cards abertos
+        document.querySelectorAll('.card.mobile-active').forEach(activeCard => {
+            if (activeCard !== card) {
+                activeCard.classList.remove('mobile-active');
+            }
         });
+
+        // Alterna o card clicado
         card.classList.toggle('mobile-active');
     } else {
+        // Comportamento original para desktop
         card.classList.toggle('active');
     }
 }
 
-// Evento para cada card
-cards.forEach(card => {
-    card.addEventListener('click', (e) => {
-        // Não fecha o card se clicar em um link
-        if (e.target.closest('a')) return;
-
-        toggleCard(card, window.innerWidth <= 767);
-    });
-});
-
-// Impede clique nos links de fechar cards no mobile
+// Impede que os links dentro do card fechem o card no mobile
 document.querySelectorAll('.card a').forEach(link => {
-    link.addEventListener('click', e => e.stopPropagation());
-});
-
-// Fechar card ao clicar fora (mobile)
-document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 767) {
-        let clickInsideCard = false;
-        cards.forEach(card => {
-            if (card.contains(e.target)) clickInsideCard = true;
-        });
-        if (!clickInsideCard) {
-            cards.forEach(card => card.classList.remove('mobile-active'));
-        }
-    }
+    link.addEventListener('click', function(e) {
+        e.stopPropagation(); // bloqueia propagação do clique para o card
+    });
 });
