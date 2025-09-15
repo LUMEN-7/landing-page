@@ -119,6 +119,21 @@ function handleSwipe() {
         }
     }
 }
+
 function toggleContent(card) {
-  card.classList.toggle('active'); // Alterna a classe 'active' no card
+    // Verifica se é mobile
+    if (window.innerWidth <= 767) {
+        // Fecha outros cards abertos
+        document.querySelectorAll('.card.mobile-active').forEach(activeCard => {
+            if (activeCard !== card) {
+                activeCard.classList.remove('mobile-active');
+            }
+        });
+
+        // Alterna o card clicado
+        card.classList.toggle('mobile-active');
+    } else {
+        // Comportamento original para desktop
+        card.classList.toggle('active');
+    }
 }
