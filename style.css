@@ -1460,6 +1460,10 @@ body {
 		margin-top: 2rem;
 		padding-top: 1.5rem;
 	}
+
+	.email{
+		display: block;
+	}
 }
 
 /* Efeitos de foco para acessibilidade */
