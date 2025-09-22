@@ -137,3 +137,15 @@ function toggleContent(card) {
         card.classList.toggle('active');
     }
 }
+
+    function isMobile() {
+        return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    const link = document.getElementById('emailLink');
+
+    if (isMobile()) {
+        // Altera link para mobile usando mailto:
+        link.href = "mailto:lumen.astra7@gmail.com?subject=Contato&body=Mensagem%20aqui";
+        link.removeAttribute('target'); // target="_blank" não faz sentido em mailto
+    }
