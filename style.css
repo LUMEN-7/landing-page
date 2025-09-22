@@ -1378,6 +1378,10 @@ body {
 	font-style: italic;
 }
 
+.email{
+	display: none;
+}
+
 /* RESPONSIVIDADE */
 @media (max-width: 968px) {
 	.footer {
