@@ -1378,9 +1378,10 @@ body {
 	font-style: italic;
 }
 
-.email{
-	display: none;
+.social-icons a.email {
+    display: none;
 }
+
 
 /* RESPONSIVIDADE */
 @media (max-width: 968px) {
@@ -1465,9 +1466,11 @@ body {
 		padding-top: 1.5rem;
 	}
 
-	.email{
-		display: block;
-	}
+    .social-icons a.email {
+        display: flex; /* ou inline-flex, para alinhar ícone + texto */
+        align-items: center;
+        gap: 8px; /* espaçamento entre ícone e texto */
+    }
 }
 
 /* Efeitos de foco para acessibilidade */
