@@ -4,3 +4,35 @@
 @media(max-width:760px){.container{width:min(100% - 36px,600px)}.nav{height:78px}.brand img{width:38px;height:38px}.menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;border:1px solid #ffffff50;background:transparent;border-radius:4px;padding:12px;cursor:pointer;z-index:3}.menu-toggle span{width:22px;height:2px;background:white}.nav-links{display:none;position:absolute;top:77px;left:0;right:0;padding:25px 18px 35px;background:#121521;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid #333}.nav-links.open{display:flex}.nav-links>a{padding:15px;border-bottom:1px solid #ffffff12}.nav-links .nav-contact{margin-top:18px;text-align:center}.hero{min-height:760px;min-height:100svh}.hero-layout{display:flex;flex-direction:column;justify-content:center;align-items:stretch;padding-top:135px;padding-bottom:38px}.hero-copy{z-index:2}.hero h1{font-size:clamp(46px,11vw,76px)}.hero-desc{font-size:15px;line-height:1.7}.hero-visual{position:absolute;right:-130px;bottom:30px;height:320px;width:320px;opacity:.34}.hero-foot{font-size:9px}.section{padding:80px 0}.about-grid{grid-template-columns:1fr;gap:10px}.about-body{padding-top:18px}.about-body p{font-size:15px}.values-grid{grid-template-columns:1fr;margin-top:55px;gap:10px}.value-card h3{margin-top:20px}.section-heading{align-items:start;flex-direction:column;gap:22px}.projects-grid{grid-template-columns:1fr}.project-card{min-height:520px}.project-top,.project-copy{padding-left:24px;padding-right:24px}.project-copy{padding-top:24px}.highlights-grid{grid-template-columns:1fr}.highlight>img{height:220px}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.member>img{height:230px}.section-intro{max-width:none}.contact-section{padding:85px 0}.contact-mark{display:none}.footer-top,.footer-bottom{flex-wrap:wrap}.footer-top{gap:25px}.footer-bottom{line-height:1.8}}
 @media(max-width:420px){.hero-actions{flex-direction:column;align-items:stretch}.hero-foot{gap:12px}.hero-foot span{max-width:160px}.team-grid{gap:12px}.member>img{height:190px}.member h3{font-size:15px}.footer-top>div{gap:15px;flex-wrap:wrap}.hero h1{font-size:45px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Refinamentos: dimensões consistentes no portfólio */
+.projects-grid{align-items:stretch}
+.project-card{min-height:0;display:flex;flex-direction:column}
+.project-card .project-copy{flex:1}
+.project-card .project-art{flex:none;height:238px;min-height:238px;width:100%;overflow:hidden}
+.project-card .project-art>span{font-size:clamp(64px,8vw,110px)}
+.project-card .project-art small{text-align:center;padding:0 12px}
+.art-labflow img,.art-race img{width:100%;height:100%;max-height:none;object-fit:contain;padding:31px 16%;mix-blend-mode:normal}
+.art-labflow{background:radial-gradient(ellipse at 50% 100%,#214454,#102331 70%)}
+.art-race{background:radial-gradient(ellipse at 50% 100%,#373061,#211c36 70%)}
+/* Links dos integrantes */
+.member-links{display:flex;flex-wrap:wrap;gap:15px;align-items:center}
+.member-links a{display:inline-flex;border-bottom:1px solid #9c91d5;padding-bottom:4px}
+.member-links a:hover{color:white}
+/* Formulário institucional */
+.contact-layout--form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,85px);align-items:start}
+.contact-copy{padding-top:22px}
+.contact-copy h2{font-size:clamp(39px,4.3vw,67px)}
+.contact-email{font-size:14px;font-weight:700;border-bottom:1px solid #8472c5;padding-bottom:7px}
+.contact-form{background:#ffffffb8;border:1px solid #ffffffd9;border-radius:12px;padding:clamp(22px,3vw,38px);box-shadow:0 18px 50px #16123313}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.field{display:flex;flex-direction:column;gap:9px;margin-bottom:19px}
+.field label{font-weight:700;font-size:12px;color:#2a2543}
+.field input,.field textarea{font-family:var(--font-body);font-size:14px;color:#222033;border:1px solid #ccc6df;background:#fff;border-radius:6px;padding:15px 14px;min-width:0;width:100%}
+.field textarea{resize:vertical;min-height:130px;line-height:1.5}
+.field input:focus,.field textarea:focus{outline:2px solid #8f80cf;outline-offset:1px}
+.form-help{font-size:11px!important;line-height:1.5;color:#777185!important;margin:0 0 20px!important}
+.contact-form .btn{border:0;cursor:pointer}
+.form-success{color:#2b5a3a!important;font-weight:700;font-size:13px!important}
+.honeypot{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;pointer-events:none}
+@media(max-width:760px){.contact-layout--form{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr;gap:0}.project-card .project-art{height:210px;min-height:210px}.art-labflow img,.art-race img{padding:24px 12%}}
