@@ -36,3 +36,30 @@
 .form-success{color:#2b5a3a!important;font-weight:700;font-size:13px!important}
 .honeypot{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;pointer-events:none}
 @media(max-width:760px){.contact-layout--form{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr;gap:0}.project-card .project-art{height:210px;min-height:210px}.art-labflow img,.art-race img{padding:24px 12%}}
+
+/* Identidade unificada dos banners */
+.project-card .project-art{height:220px;min-height:220px;gap:12px;padding:24px 18px;isolation:isolate}
+.project-card .project-art>span{font-size:clamp(48px,6.3vw,88px);line-height:1;letter-spacing:-.065em;white-space:nowrap;text-align:center;max-width:100%}
+.project-card .project-art small{font-size:clamp(8px,.7vw,10px);letter-spacing:.16em;line-height:1.6;text-align:center}
+.art-nexus>span{font-size:clamp(51px,6.6vw,94px)!important;letter-spacing:-.075em!important}
+.art-labflow{background:radial-gradient(ellipse at 50% 110%,#1e7486,#092d3d 70%)}
+.art-race{background:radial-gradient(ellipse at 50% 110%,#554399,#1d1839 72%)}
+.art-labflow>span,.art-race>span{color:#f7f4ff}
+/* Formulário: acabamento editorial */
+.contact-layout--form{align-items:center}
+.contact-form{background:#f9f8ff;border:1px solid #ffffff;padding:clamp(24px,3.2vw,44px);box-shadow:0 24px 65px rgba(39,24,83,.13);border-radius:15px}
+.form-intro{margin-bottom:28px;padding-bottom:22px;border-bottom:1px solid #ded9ed}
+.form-kicker{display:block;font-size:10px;font-weight:700;letter-spacing:.17em;color:#7162b0;margin-bottom:12px}
+.form-intro h3{font-size:clamp(23px,2.4vw,30px);font-weight:600;letter-spacing:-.055em;margin-bottom:9px;color:#1c1732}
+.form-intro p{font-size:13px!important;line-height:1.65;color:#736d83!important;margin:0!important}
+.contact-form .field{gap:10px;margin-bottom:22px}
+.contact-form .field label{font-size:12px;letter-spacing:.01em;color:#2e2843}
+.contact-form .field input,.contact-form .field textarea{border:1px solid #dcd7e7;border-radius:8px;background:white;padding:16px;font-size:14px;transition:border-color .2s,box-shadow .2s}
+.contact-form .field input::placeholder,.contact-form .field textarea::placeholder{color:#9993a5}
+.contact-form .field input:hover,.contact-form .field textarea:hover{border-color:#b2a7cf}
+.contact-form .field input:focus,.contact-form .field textarea:focus{outline:none;border-color:#8873c8;box-shadow:0 0 0 3px rgba(136,115,200,.14)}
+.contact-form .field textarea{min-height:158px}
+.contact-form .btn{width:100%;min-height:53px;justify-content:space-between;padding:16px 22px;font-size:14px}
+.contact-form .btn:hover{background:#302744}
+.contact-form .form-help{margin:0 0 24px!important;color:#777085!important}
+@media(max-width:760px){.project-card .project-art{height:200px;min-height:200px}.project-card .project-art>span{font-size:clamp(42px,11vw,76px)}.art-nexus>span{font-size:clamp(47px,12vw,82px)!important}.contact-form{padding:24px 20px}}
