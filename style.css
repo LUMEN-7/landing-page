@@ -63,3 +63,11 @@
 .contact-form .btn:hover{background:#302744}
 .contact-form .form-help{margin:0 0 24px!important;color:#777085!important}
 @media(max-width:760px){.project-card .project-art{height:200px;min-height:200px}.project-card .project-art>span{font-size:clamp(42px,11vw,76px)}.art-nexus>span{font-size:clamp(47px,12vw,82px)!important}.contact-form{padding:24px 20px}}
+
+
+/* Retorno discreto do formulário, sem redirecionamento */
+.contact-form .form-feedback{margin:14px 0 0!important;font-size:12px!important;line-height:1.65;padding:11px 13px;border-radius:7px}
+.contact-form .form-feedback[hidden]{display:none!important}
+.contact-form .form-feedback.is-success{background:#eaf5ed;color:#23633a!important;border:1px solid #bcdfc5}
+.contact-form .form-feedback.is-error{background:#fff0ed;color:#943d30!important;border:1px solid #f0c9c0}
+.contact-form .btn:disabled{opacity:.65;cursor:wait;transform:none}
