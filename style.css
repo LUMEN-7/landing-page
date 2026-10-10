@@ -71,3 +71,14 @@
 .contact-form .form-feedback.is-success{background:#eaf5ed;color:#23633a!important;border:1px solid #bcdfc5}
 .contact-form .form-feedback.is-error{background:#fff0ed;color:#943d30!important;border:1px solid #f0c9c0}
 .contact-form .btn:disabled{opacity:.65;cursor:wait;transform:none}
+
+/* Contato: ancoragem no topo e ocupação da viewport */
+html{scroll-padding-top:0}
+#sobre,#projetos,#conquistas,#equipe{scroll-margin-top:80px}
+#contato{scroll-margin-top:0}
+.contact-section{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:clamp(32px,5vh,64px) 0;overflow:visible}
+.contact-section>.container{width:min(1240px,calc(100% - 64px))}
+@media(max-width:760px){
+  .contact-section{min-height:100svh;align-items:stretch;padding:64px 0}
+  .contact-section>.container{width:min(100% - 36px,600px)}
+}
