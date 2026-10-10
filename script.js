@@ -24,21 +24,28 @@ if (contactForm && contactFeedback) {
     sendButton.textContent = 'Enviando...';
 
     try {
+      const formData = Object.fromEntries(new FormData(contactForm).entries());
       const response = await fetch(contactForm.action, {
         method: 'POST',
-        body: new FormData(contactForm),
-        headers: { Accept: 'application/json' }
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
       });
       const result = await response.json().catch(() => ({}));
       const accepted = response.ok && (result.success === true || result.success === 'true');
-      if (!accepted) throw new Error(result.message || 'O serviço não confirmou o envio.');
+      if (!accepted) {
+        const reason = typeof result.message === 'string' ? result.message : 'O serviço não confirmou o envio.';
+        throw new Error(reason);
+      }
 
       contactFeedback.classList.add('is-success');
       contactFeedback.textContent = 'Mensagem recebida pelo serviço! Obrigada pelo contato. Nossa equipe responderá por e-mail.';
       contactForm.reset();
     } catch (error) {
       contactFeedback.classList.add('is-error');
-      contactFeedback.textContent = 'Não foi possível confirmar o envio. Tente novamente ou escreva para lumen.astra7@gmail.com.';
+      contactFeedback.textContent = 'Não foi possível enviar. ' + (error instanceof TypeError ? 'Falha de conexão com o serviço. ' : (error.message || '')) + ' Se persistir, escreva para lumen.astra7@gmail.com.';
       console.error('Falha no formulário de contato:', error);
     } finally {
       contactFeedback.hidden = false;
