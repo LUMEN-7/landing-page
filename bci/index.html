@@ -38,6 +38,68 @@ footer{background:#040e1c;color:#98a9be;padding:28px 0;font-size:12px}footer .wr
 @media(max-width:1000px){.engine-grid{grid-template-columns:1fr;gap:12px}.engine-card{min-height:auto}.engine-card .engine-number{margin-bottom:20px}.engine-connector{transform:rotate(90deg)}.team-grid{grid-template-columns:repeat(3,1fr)}.insight-strip{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.story-intro,.confidence{grid-template-columns:1fr;gap:30px}.insight-strip,.study-grid,.capabilities{grid-template-columns:1fr}.team-grid{grid-template-columns:repeat(2,1fr)}.team-member{min-height:155px}.team-member h3{margin-top:20px}.strip-intro{min-height:140px}}
 @media(max-width:420px){.team-grid{grid-template-columns:1fr}}
+
+/* Correções de layout e responsividade */
+html,body{max-width:100%;overflow-x:clip}
+.wrap,.hero-inner>*,.story-intro>*,.confidence>*,.impact-grid>*,.section-head,.engine-card,.feature,.capability,.team-member{min-width:0}
+.hero h1,.section h2,.final h2,.team-member h3,.pain-item strong{overflow-wrap:break-word}
+.dashboard{width:100%;min-width:0;transform-origin:center}
+.dash-top{min-width:0}.dash-top span:last-child{text-align:right;overflow-wrap:anywhere;letter-spacing:.08em}
+.dash-heading>div,.source-card>div{min-width:0}.dash-heading strong,.source-card strong{overflow-wrap:anywhere}
+.car{min-width:0}.car strong,.car small{overflow-wrap:anywhere}
+.engine-grid{grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr) 26px minmax(0,1fr);gap:8px}
+.engine-card{padding:clamp(18px,2.1vw,30px)}
+.engine-card h3{font-size:clamp(20px,2vw,27px);overflow-wrap:break-word}
+.source-card{align-items:flex-start}.source-card>div{flex:1}
+.impact-big{white-space:nowrap}
+@media(max-width:1100px){
+ .nav-links{gap:15px;font-size:12px}
+ .nav{gap:12px}
+ .mark small{display:none}
+ .engine-grid{grid-template-columns:1fr;gap:8px}
+ .engine-connector{transform:rotate(90deg);min-height:26px}
+ .engine-card{min-height:auto;padding:24px}
+ .engine-card .engine-number{margin-bottom:18px}
+ .story-intro{grid-template-columns:1fr 1fr;gap:35px}
+ .insight-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:900px){
+ .nav{height:70px}
+ .menu{display:block;cursor:pointer}
+ .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#08182b;flex-direction:column;align-items:stretch;gap:0;padding:10px 24px 22px;border-bottom:1px solid #ffffff25;box-shadow:0 20px 35px #0005}
+ .nav-links.open{display:flex}
+ .nav-links a{padding:14px 0}
+ .nav-links .nav-cta{text-align:center;margin-top:10px}
+ .story-intro,.confidence{grid-template-columns:1fr;gap:30px}
+ .hero-inner{grid-template-columns:1fr;gap:40px;padding-top:70px;padding-bottom:75px}
+ .dashboard{max-width:600px;transform:none}
+}
+@media(max-width:700px){
+ .hero h1{font-size:clamp(42px,10vw,64px)}
+ .impact-big{font-size:clamp(75px,21vw,120px)}
+ .confidence-panel{padding:18px}
+ .source-card{flex-wrap:wrap}
+ .study-card strong{font-size:40px}
+ .section-head h2,.confidence h2{font-size:clamp(33px,8.5vw,52px)}
+}
+@media(max-width:420px){
+ .wrap{width:calc(100% - 32px)}
+ .dash-top{padding:11px 12px;font-size:9px}
+ .dash-body{padding:12px}
+ .dash-heading{flex-wrap:wrap}
+ .status{font-size:9px}
+ .metric b{font-size:16px}
+ .metric small{font-size:8px}
+ .car svg{height:48px}
+ .car{min-height:125px}
+ .pain-item{grid-template-columns:40px 1fr;gap:14px}
+ .pain-icon{height:40px;width:40px}
+ .team-grid{grid-template-columns:1fr}
+ .final h2{font-size:clamp(36px,10vw,45px)}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+}
 </style>
 </head>
 <body>
